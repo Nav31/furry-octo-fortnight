@@ -8,7 +8,6 @@ def to_camel_case(text):
         else:
             return_string += word
     return return_string
-    # return "".join([word[:1].upper() + word[1:] for idx, word in enumerate(text) if idx > 1])
 
 # print to_camel_case("the_stealth_warrior")
 

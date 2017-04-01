@@ -1,4 +1,3 @@
-# https://www.codewars.com/kata/build-tower/train/python
 def tower_builder(n_floors):
     return_list = []
     base = "*"

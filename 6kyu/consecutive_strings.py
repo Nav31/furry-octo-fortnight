@@ -11,9 +11,7 @@ def longest_consec(arr, k):
         temp_string = ""
     return longest_string
 
-# print longest_consec(["zone", "abigail", "theta", "form", "libe", "zas"], 2)
 print longest_consec(["wlwsasphmxx","owiaxujylentrklctozmymu","wpgozvxxiu"], 2)
-# print len("wlwsasphmxxowiaxujylentrklctozmymu"), len("owiaxujylentrklctozmymuwpgozvxxiu")
 
 # Best
 def longest_consec(strarr, k):

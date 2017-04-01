@@ -1,5 +1,4 @@
 def is_merge(str, part1, part2):
-    # print(str, part1, part2)
     if len(part1) <= 0 or len(part2) <= 0:
         return False
     if part1+part2 == str:
@@ -18,9 +17,4 @@ def is_merge(str, part1, part2):
             return return_string
     return False
 
-
-# print is_merge('codewars', 'cdw', 'oears')
-# print is_merge('codewars', 'code', 'wars')
-# print is_merge("Making progress", 'Mak pross', 'inggre')
 print is_merge("Bananas from Bahamas", "Bahas", 'Bananas from am')
-# print is_merge('Can we merge it? Yes, we can!', 'an we rie an!', 'Cmege t? Yes, wc')
