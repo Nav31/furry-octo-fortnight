@@ -1,5 +1,6 @@
 # URL: https://www.codewars.com/kata/who-likes-it/train/python
 
+
 # Best
 def likes(names):
     if len(names) == 0:
