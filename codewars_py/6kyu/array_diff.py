@@ -7,3 +7,7 @@ def array_diff(a, b):
         if num not in b:
             return_list.append(num)
     return return_list
+
+# Best
+def array_diff(a, b):
+    return [x for x in a if x not in b]
