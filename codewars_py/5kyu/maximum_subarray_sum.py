@@ -13,7 +13,7 @@ def maxSequence(arr):
                 highest_sum = current_list_sum
     return 0 if all_neg else highest_sum
 
-# Cleaver
+# Clever
 def maxSequence(arr):
   lowest = ans = total = 0
   for i in arr:
