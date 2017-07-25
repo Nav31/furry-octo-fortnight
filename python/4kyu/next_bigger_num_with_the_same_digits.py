@@ -11,7 +11,6 @@ def next_bigger(numb):
         return -1
 
     for i in range(numb, max_num+1):
-        print(i)
         numb += 1
         if int("".join(sorted(list(str(numb)), reverse=True))) == max_num:
             return numb
