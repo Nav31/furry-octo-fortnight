@@ -2,33 +2,35 @@
 # URL: https://www.codewars.com/kata/snail
 
 
-def snail(array):
-    return_list = []
+def snail(an_array):
+    ret_list = []
+    # iterate over the top list
 
-    # This is the top array
-    for num in array[0]:
-        return_list.append()
+    def sub_snail(a_array):
+        if len(a_array) == 0 or a_array == [[]]:
+            return ret_list
 
-    # zipped_tup = zip(*array)
-    # print array
-    # vertical_right_list = list(zipped_tup[-1])
-    #
-    # # This is the right vertical row
-    # return_list.append(vertical_right_list)
-    # # This is the bottom array
-    # return_list.append(array[-1][:-1])
-    #
-    # # vertical left list
-    # return_list.append(list(zipped_tup[0])[1:])
-    # print(return_list)
+        if len(a_array) == 1:
+            ret_list.append(a_array[0][0])
+            return ret_list
 
-array = [[1,2,3],
-         [8,9,4],
-         [7,6,5]]
+        for char in a_array[0]:
+            ret_list.append(char)
+        a_array.pop(0)
 
-array2 = [[1,2,3,1],
-          [4,5,6,4],
-          [7,8,9,7],
-          [7,8,9,7]]
+        # iterate over the right most column
+        for sub_arr in a_array:
+            ret_list.append(sub_arr.pop())
 
-print(snail(array2))
+        # iterate over the bottom array of-course must reverse or...
+        for i in range(len(a_array[-1])-1, -1, -1):
+            ret_list.append(a_array[-1][i])
+        a_array.pop()
+
+        # iterate from the remaining
+        for sub_arr in reversed(a_array):
+            ret_list.append(sub_arr.pop(0))
+
+        return sub_snail(a_array)
+
+    return sub_snail(an_array)
